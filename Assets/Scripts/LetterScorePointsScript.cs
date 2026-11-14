@@ -20,11 +20,6 @@ public class LetterScorePointsScript : MonoBehaviour
     //how fast you lose points at the high end
     public float HighPenaltyRate;
     [Header("Speed Settings")]
-    //how fast you can go before you start losing points
-    public float maxSealSpeed;
-    //how fast you lose points when moving too fast
-    public float maxSpeedPenaltyRate;
-    public float speedPointsLoss = 0;
     private Vector3 lastMousePosition;
     private float currentMouseSpeed;
     [Header("Score")]
@@ -62,7 +57,6 @@ public class LetterScorePointsScript : MonoBehaviour
         {
             //starts the functions of the game once you click anywhere on the screen
             CheckAccuracy();
-            CheckSpeedPenalty();
         }
         
         if (currentScoreText != null)
@@ -74,6 +68,7 @@ public class LetterScorePointsScript : MonoBehaviour
                 livePercentage = (CurrentScore / maxPossibleScore) * 100f;
                 livePercentage = Mathf.Clamp(livePercentage, 0f, 100f);
             }
+            currentScoreText.text = "Score: " + livePercentage.ToString("F2") + "%";
         }
 
 
@@ -172,15 +167,6 @@ public class LetterScorePointsScript : MonoBehaviour
         Math.Abs(Camera.main.transform.position.z - WindowPoints[0].position.z)));
         //calculates the speed of the mouse by checking how far it has moved since the last frame and dividing by time
         currentMouseSpeed = Vector3.Distance(currentMousePos, lastMousePosition) / Time.deltaTime;
-    }
-    void CheckSpeedPenalty()
-    {
-        //checks the speed and it goes above a #, you lose points
-        if (currentMouseSpeed > maxSealSpeed)
-        {
-            CurrentScore -= Time.deltaTime * maxSpeedPenaltyRate;
-            Debug.Log("SLOW DOWN! Moving too fast: " + currentMouseSpeed);
-        }
     }
     public float GetFinalScore()
     {
