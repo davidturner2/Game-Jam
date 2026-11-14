@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e7dcd9ad7af211740b46cf27a337a3bc
+guid: cc532ffcf41da4652b5da29b55ede02d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3894415531740123212
-    second: Phone_0
+      213: -4288482965380877165
+    second: 28m-first-apartment-alone-only-gay-in-dreams-v0-rwaa67xunjhe1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Phone_0
+      name: 28m-first-apartment-alone-only-gay-in-dreams-v0-rwaa67xunjhe1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 508
-        height: 900
+        width: 640
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c405229ea4ebb0630800000000000000
-      internalID: 3894415531740123212
+      spriteID: 394b82fd67f3c74c0800000000000000
+      internalID: -4288482965380877165
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Phone_0: 3894415531740123212
+      28m-first-apartment-alone-only-gay-in-dreams-v0-rwaa67xunjhe1_0: -4288482965380877165
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
