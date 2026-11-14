@@ -1,15 +1,16 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class train : MonoBehaviour
 {
     float timer;
-    int number = 1;
+    public int number = 1;
     public TextMeshProUGUI stop;
     public TextMeshProUGUI numberstop;
     public TextMeshProUGUI button;
-    bool no=true;
-
+    public bool no=true;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +21,7 @@ public class train : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         
         timer+=Time.deltaTime;
         if (timer > 3 && timer<=7)

@@ -9,7 +9,7 @@ public class sharpturn : MonoBehaviour
        public float range = 1f;
 
     bool sweet2 = false;
-
+bool stopreached;
     float blue = 0;    
     float random2 = 9;
     int just=0;
@@ -27,6 +27,7 @@ public class sharpturn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!stopreached){
         stepper+=Time.deltaTime;
         blue+=Time.deltaTime;
         just=Mathf.RoundToInt(stepper);
@@ -54,5 +55,6 @@ public class sharpturn : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position,orig,blue);
         }
         }
+                }
     }
 }

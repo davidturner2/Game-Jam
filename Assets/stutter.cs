@@ -11,21 +11,20 @@ public class stutter : MonoBehaviour
     bool sweet2 = false;
 
     bool stop = false;
-    bool sharpturn= false;
+    bool stopreached= false;
     float random = 0;    
-    float random2 = 9;
 
     int just = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        random2= Random.Range(0,40);
         random = Random.Range(0,4);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!stopreached){
         stepper+=Time.deltaTime;
         just=Mathf.RoundToInt(stepper);
         //print(just);
@@ -37,38 +36,26 @@ public class stutter : MonoBehaviour
         sweet2 = false;
         else if(stepper2>1)
         sweet2 =true;
-
         if(sweet){
         stepper-=Time.deltaTime*1.2f;
         }else{
         stepper+=Time.deltaTime;
         }
-
         if(sweet2){
         stepper2-=Time.deltaTime*1.5f;
         }else{
         stepper2+=Time.deltaTime*1.5f;
         }
-
-
-
         if(random>2){
         random=0;
         stop = !stop;
         }
-        
-
         if (just % 3 == 0) {
-        random2 = Random.Range(0,40);
         random = Random.Range(0,7);
         }
-
-
-    
         if(!stop){
         transform.position = new Vector3(Mathf.Lerp(0,3,easeInOutBounce(stepper)),transform.position.y,-10f);
-        
-  
+        }
         }
     }
 
