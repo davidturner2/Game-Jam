@@ -27,8 +27,9 @@ public class WindowSealer : MonoBehaviour
         //creates the line renderer and sets the first point to where the mouse is
         DrawingSegment = Instantiate(thing);
         LR = DrawingSegment.GetComponent<LineRenderer>();
+        DrawingSegment.tag = "Drawing";
         //DrawingSegment.AddComponent<InsulationScript>();
-        
+
         Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         LR.SetPosition(0, mousePos);
         LR.SetPosition(1, mousePos);
