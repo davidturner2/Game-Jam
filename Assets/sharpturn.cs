@@ -14,7 +14,6 @@ bool stopreached;
     float random2 = 9;
     int just=0;
         float g=0;
-    public Transform move;
     Vector3 orig;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
