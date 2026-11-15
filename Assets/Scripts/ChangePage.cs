@@ -53,7 +53,7 @@ public class ChangePage : MonoBehaviour
             DrawLogicScript.unsealedPoints = new List<Transform>(WindowPoints3);
 
             Word3.SetActive(true);
-            Image3.SetActive(false);
+            Image3.SetActive(true);
         }
     }
 
