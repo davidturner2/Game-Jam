@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using NUnit.Framework;
+using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class ChangePage : MonoBehaviour
@@ -24,6 +26,8 @@ public class ChangePage : MonoBehaviour
             Transform[] WindowPoints = DrawLogicScript.WindowPoints;
             WindowPoints = WindowPoints2;
             DrawLogicScript.WindowPoints = WindowPoints;
+
+            DrawLogicScript.unsealedPoints = new List<Transform>(WindowPoints2);
             Word2.SetActive(true);
         }
         else if (Word2.activeSelf)
@@ -38,6 +42,8 @@ public class ChangePage : MonoBehaviour
             Transform[] WindowPoints = DrawLogicScript.WindowPoints;
             WindowPoints = WindowPoints3;
             DrawLogicScript.WindowPoints = WindowPoints;
+            DrawLogicScript.unsealedPoints = new List<Transform>(WindowPoints3);
+
             Word3.SetActive(true);
         }
     }

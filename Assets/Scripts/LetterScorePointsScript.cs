@@ -9,7 +9,7 @@ using UnityEngine.EventSystems;
 public class LetterScorePointsScript : MonoBehaviour
 {
     public Transform[] WindowPoints;
-    private List<Transform> unsealedPoints;
+    public List<Transform> unsealedPoints;
     [Header("Scoring Parameters")]
     //how far the mouose is from the sealing points before it starts to lose accuracy
     public float LowErrorMargin;
@@ -127,7 +127,7 @@ public class LetterScorePointsScript : MonoBehaviour
         {
             losingPoints = true;
             CurrentScore -= Time.deltaTime * HighPenaltyRate;
-            Debug.Log("<color=red>LOSING EVEN MORE POINTS!</color>");
+            Debug.Log("<color=red>High Penalty!</color>");
             //WindowScript.instance.timer -= Time.deltaTime * speedPointsLoss;
         }
         //loses points if you are somewhat far from a seal
@@ -135,7 +135,7 @@ public class LetterScorePointsScript : MonoBehaviour
         {
             losingPoints = true;
             CurrentScore -= Time.deltaTime * LowPenaltyRate;
-            Debug.Log("<color=red>LOSIKNG POINTS!</color>");
+            Debug.Log("<color=red>Low Penalty!</color>" + LowPenaltyRate);
             //WindowScript.instance.timer -= Time.deltaTime * speedPointsLoss;
 
         }
@@ -144,19 +144,6 @@ public class LetterScorePointsScript : MonoBehaviour
         {
             losingPoints = false;
             timer = 0f;
-        }
-        //loses even more points you are losing points for too long
-        if (losingPoints)
-        {
-            if (losingPoints)
-            {
-                timer += Time.deltaTime;
-                if (timer >= 2f)
-                {
-                    Debug.Log("<color=red>LOSING POINTS FOR TOO LONG!</color>");
-                    CurrentScore -= Time.deltaTime * HighPenaltyRate * 1.5f;
-                }
-            }
         }
     }
     void CalculateMouseSpeed()
