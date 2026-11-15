@@ -40,7 +40,7 @@ public class ChangePage : MonoBehaviour
         else if (Word2.activeSelf)
         {
             Word2.SetActive(false);
-            Word2.SetActive(false);
+            Image2.SetActive(false);
             GameObject[] Drawing = GameObject.FindGameObjectsWithTag("Drawing");
             foreach (GameObject drawing in Drawing)
             {
