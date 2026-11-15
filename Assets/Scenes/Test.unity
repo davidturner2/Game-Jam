@@ -4688,7 +4688,7 @@ MonoBehaviour:
   LowErrorMargin: 0.3
   LowPenaltyRate: 4
   HighErrorMargin: 0.6
-  HighPenaltyRate: 10
+  HighPenaltyRate: 20
   finalPercentage: 0
   finalTierPoints: 0
   pointsPerSeal: 1

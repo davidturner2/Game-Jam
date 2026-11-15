@@ -36,6 +36,7 @@ public class ChangePage : MonoBehaviour
             DrawLogicScript.unsealedPoints = new List<Transform>(WindowPoints2);
             Word2.SetActive(true);
             Image2.SetActive(true);
+            DrawLogicScript.maxPossibleScore = WindowPoints2.Length * DrawLogicScript.pointsPerSeal;
         }
         else if (Word2.activeSelf)
         {
@@ -51,7 +52,7 @@ public class ChangePage : MonoBehaviour
             WindowPoints = WindowPoints3;
             DrawLogicScript.WindowPoints = WindowPoints;
             DrawLogicScript.unsealedPoints = new List<Transform>(WindowPoints3);
-
+            DrawLogicScript.maxPossibleScore = WindowPoints3.Length * DrawLogicScript.pointsPerSeal;
             Word3.SetActive(true);
             Image3.SetActive(true);
         }
