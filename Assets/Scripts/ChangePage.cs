@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using NUnit.Framework;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
@@ -12,11 +13,16 @@ public class ChangePage : MonoBehaviour
     public Transform[] WindowPoints3;
     public LetterScorePointsScript DrawLogicScript;
 
+    public GameObject Image1;
+    public GameObject Image2;
+    public GameObject Image3;
+
     public void NextPage()
     {
         if (Word1.activeSelf)
         {
             Word1.SetActive(false);
+            Image1.SetActive(false);
             GameObject[] Drawing = GameObject.FindGameObjectsWithTag("Drawing");
             foreach (GameObject drawing in Drawing)
             {
@@ -29,9 +35,11 @@ public class ChangePage : MonoBehaviour
 
             DrawLogicScript.unsealedPoints = new List<Transform>(WindowPoints2);
             Word2.SetActive(true);
+            Image2.SetActive(true);
         }
         else if (Word2.activeSelf)
         {
+            Word2.SetActive(false);
             Word2.SetActive(false);
             GameObject[] Drawing = GameObject.FindGameObjectsWithTag("Drawing");
             foreach (GameObject drawing in Drawing)
@@ -45,6 +53,7 @@ public class ChangePage : MonoBehaviour
             DrawLogicScript.unsealedPoints = new List<Transform>(WindowPoints3);
 
             Word3.SetActive(true);
+            Image3.SetActive(false);
         }
     }
 
