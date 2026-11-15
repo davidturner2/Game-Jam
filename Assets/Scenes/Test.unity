@@ -979,7 +979,7 @@ GameObject:
   - component: {fileID: 200901578}
   - component: {fileID: 200901577}
   m_Layer: 0
-  m_Name: IMG_3571_0
+  m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1032,7 +1032,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5632690600012496999, guid: a149c17b4d31e3d40b873e3d236ca664, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4875,6 +4875,9 @@ MonoBehaviour:
   - {fileID: 72592208}
   - {fileID: 636055051}
   DrawLogicScript: {fileID: 1124579985}
+  Image1: {fileID: 1384019096}
+  Image2: {fileID: 881201487}
+  Image3: {fileID: 1930065387}
 --- !u!1 &1132268591
 GameObject:
   m_ObjectHideFlags: 0
@@ -10359,5 +10362,5 @@ SceneRoots:
   - {fileID: 1863412092}
   - {fileID: 200901578}
   - {fileID: 1384019098}
-  - {fileID: 1930065389}
   - {fileID: 881201489}
+  - {fileID: 1930065389}
