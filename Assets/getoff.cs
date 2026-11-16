@@ -28,7 +28,12 @@ public float s1 = 0;
         b=GetComponent<Button>();
     }
 
-
+    public void hold()
+    {
+   
+        print("door true");
+        door = true;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -73,7 +78,7 @@ public float s1 = 0;
             if (Input.GetMouseButtonUp(0))
             {
                 f=false;
-                        door = false;
+                        //door = false;
             }
         }
     }

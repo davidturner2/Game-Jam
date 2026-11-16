@@ -959,7 +959,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\"<b>Hold</b> the get off button to make it off the train\"\n\u201CMouse
     over the bottom of the screen to look down\u201D\r\n\u201CFigure out what the
-    picture is depicting and write it in the boxes provided below\u201D\n\u201CMouse
+    picture is depicting and write IN ALL CAPS what it is in the boxes provided below\u201D\n\u201CMouse
     over the top of the screen to see the stop and be able to get off\u201D\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c777febcf930c89429cfbd1bc313ef91, type: 2}
