@@ -8,7 +8,7 @@ public class CursorScript : MonoBehaviour
     public Vector2 tipOffset;
     void Start()
     {
-        Cursor.visible = false;
+        Cursor.visible = true;
     }
     void Update()
     {

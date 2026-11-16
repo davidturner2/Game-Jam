@@ -9,7 +9,7 @@ public class ChangePage : MonoBehaviour
     public GameObject Word3;
     public Transform[] WindowPoints3;
     public LetterScorePointsScript DrawLogicScript;
-
+    public getoff final;
     public GameObject Image1;
     public GameObject Image2;
     public GameObject Image3;
@@ -25,6 +25,7 @@ public class ChangePage : MonoBehaviour
             {
                 Destroy(drawing);
             }
+            final.s1 = (DrawLogicScript.CurrentScore / DrawLogicScript.maxPossibleScore) *100f;
             DrawLogicScript.CurrentScore = 0f;
             Transform[] WindowPoints = DrawLogicScript.WindowPoints;
             WindowPoints = WindowPoints2;
@@ -44,6 +45,7 @@ public class ChangePage : MonoBehaviour
             {
                 Destroy(drawing);
             }
+            final.s2 = (DrawLogicScript.CurrentScore / DrawLogicScript.maxPossibleScore) * 100f;
             DrawLogicScript.CurrentScore = 0f;
             Transform[] WindowPoints = DrawLogicScript.WindowPoints;
             WindowPoints = WindowPoints3;
@@ -52,6 +54,10 @@ public class ChangePage : MonoBehaviour
             DrawLogicScript.maxPossibleScore = WindowPoints3.Length * DrawLogicScript.pointsPerSeal;
             Word3.SetActive(true);
             Image3.SetActive(true);
+        }
+        else
+        {
+            final.s3 = (DrawLogicScript.CurrentScore / DrawLogicScript.maxPossibleScore) * 100f;
         }
     }
 

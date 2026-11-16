@@ -19,16 +19,16 @@ bool stopreached;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        orig=transform.position;
-        g=transform.position.y;
+        orig=transform.position + new Vector3(0, -10f, 0); 
+        g=transform.position.y -10f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!stopreached){
+        blue += Time.deltaTime;
+        if (!stopreached){
         stepper+=Time.deltaTime;
-        blue+=Time.deltaTime;
         just=Mathf.RoundToInt(stepper);
         if (just % 33 == 0) {
         random2 = UnityEngine.Random.Range(0,40);
@@ -54,6 +54,10 @@ bool stopreached;
         transform.position = Vector3.Lerp(transform.position,orig,blue);
         }
         }
-                }
+        }
+        else
+        {
+            transform.position = Vector3.Lerp(transform.position, orig, blue);
+        }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 public class stutter : MonoBehaviour
 {
     [SerializeField] private float speed = 433f;
-    public float range = 1f;
+    public float ranger = 3f;
     float stepper=0;
     float stepper2=0;
 
@@ -54,7 +54,7 @@ public class stutter : MonoBehaviour
         random = Random.Range(0,7);
         }
         if(!stop){
-        transform.position = new Vector3(Mathf.Lerp(0,3,easeInOutBounce(stepper)),transform.position.y,-10f);
+        transform.position = new Vector3(Mathf.Lerp(0, ranger, easeInOutBounce(stepper)),transform.position.y,-10f);
         }
         }
     }
