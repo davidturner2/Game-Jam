@@ -934,7 +934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -126, y: -104}
+  m_AnchoredPosition: {x: -126, y: -78.5}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &969494486
@@ -957,9 +957,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u201CMouse over the bottom of the screen to look down\u201D\r\n\u201CFigure
-    out what the picture is depicting and write it in the boxes provided below\u201D\n\u201CMouse
-    over the top of the screen to see the stop and be able to get off\u201D"
+  m_text: "\"<b>Hold</b> the get off button to make it off the train\"\n\u201CMouse
+    over the bottom of the screen to look down\u201D\r\n\u201CFigure out what the
+    picture is depicting and write it in the boxes provided below\u201D\n\u201CMouse
+    over the top of the screen to see the stop and be able to get off\u201D\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c777febcf930c89429cfbd1bc313ef91, type: 2}
   m_sharedMaterial: {fileID: 216081115409174783, guid: c777febcf930c89429cfbd1bc313ef91, type: 2}
