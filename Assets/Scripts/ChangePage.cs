@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
-using NUnit.Framework;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
 public class ChangePage : MonoBehaviour
