@@ -68,7 +68,7 @@ public class LetterScorePointsScript : MonoBehaviour
                 livePercentage = (CurrentScore / maxPossibleScore) * 100f;
                 livePercentage = Mathf.Clamp(livePercentage, 0f, 100f);
             }
-            currentScoreText.text = "Score: " + livePercentage.ToString("F2") + "%";
+            currentScoreText.text =  livePercentage.ToString("F2") + "%";
         }
 
 
