@@ -5744,10 +5744,10 @@ MonoBehaviour:
   - {fileID: 1478244684}
   - {fileID: 217011949}
   unsealedPoints: []
-  LowErrorMargin: 0.25
-  LowPenaltyRate: 7.5
-  HighErrorMargin: 0.5
-  HighPenaltyRate: 30
+  LowErrorMargin: 0.3
+  LowPenaltyRate: 6
+  HighErrorMargin: 0.6
+  HighPenaltyRate: 20
   finalPercentage: 0
   finalTierPoints: 0
   pointsPerSeal: 1
